@@ -1,6 +1,6 @@
 import "vt"
 
-rule Stealer_GlorySprout_C2_URLs
+rule VT_Stealer_GlorySprout_C2_URLs
 {
   meta:
     author = "RustyNoob619"
