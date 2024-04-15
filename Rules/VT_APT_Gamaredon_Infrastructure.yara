@@ -1,7 +1,7 @@
 
 import "vt"
 
-rule APT_Gamaredon_Infrastructure
+rule VT_APT_Gamaredon_Infrastructure
 {
   meta:
     author = "RustyNoob619"
