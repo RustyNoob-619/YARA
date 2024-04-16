@@ -1,6 +1,6 @@
 import "vt"
 
-rule C2_Mythic_SSL_Certs
+rule VT_C2_Mythic_SSL_Certs
 {
   meta:
     author = "RustyNoob619"
