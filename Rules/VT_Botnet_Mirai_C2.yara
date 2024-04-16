@@ -1,6 +1,6 @@
 import "vt"
 
-rule Botnet_Mirai_C2
+rule VT_Botnet_Mirai_C2
 {
   meta:
     author = "RustyNoob619"
