@@ -1,6 +1,6 @@
 import "vt"
 
-rule EXE_Ransomware_Phobos_VT_Feb2024 {
+rule VT_EXE_Ransomware_Phobos_Feb2024 {
     meta:
         Description = "Detects Phobos Ransomware based on File Behaviour and Malware Config using VT Live Hunt"
         Author = "RustyNoob619"
