@@ -1,6 +1,6 @@
 import "vt"
 
-rule New_C2_HookBot_Login_Panels
+rule VT_New_C2_HookBot_Login_Panels
 {
   meta:
     author = "RustyNoob619"
