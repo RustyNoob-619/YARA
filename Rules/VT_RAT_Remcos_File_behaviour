@@ -1,4 +1,4 @@
-rule RAT_Remcos_File_behaviour
+rule VT_RAT_Remcos_File_behaviour
 {
   meta:
     author = "RustyNoob619"
