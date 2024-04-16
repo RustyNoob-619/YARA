@@ -1,6 +1,6 @@
 import "vt"
 
-rule Meduza_Stealer_Favicon
+rule VT_Meduza_Stealer_Favicon
 {
   meta:
     author = "RustyNoob619"
