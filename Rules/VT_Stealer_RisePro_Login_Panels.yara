@@ -1,6 +1,6 @@
 import "vt"
 
-rule Stealer_RisePro_Login_Panels
+rule VT_Stealer_RisePro_Login_Panels
 {
   meta:
     author = "RustyNoob619"
