@@ -11,6 +11,3 @@
  + Enter the name of malware that the YARA rule detects
 
 
-  
-
-### *Happy hunting* 🐧 
