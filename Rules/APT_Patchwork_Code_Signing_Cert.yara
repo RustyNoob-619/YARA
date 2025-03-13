@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule Actor_APT_IN_Patchwork_MAL_WIN_PE_Code_Signing_Cert_MAR2024 {
+rule Actor_APT_IN_Patchwork_MAL_WIN_PE_Code_Signing_Cert_MAR24 {
     meta:
         Description = "Detects malware used by Indian APT Patchwork based on the Code Signing Certificate"
         Author = "RustyNoob619"
