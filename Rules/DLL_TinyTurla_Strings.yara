@@ -1,4 +1,4 @@
-rule DLL_TinyTurla_Strings_Feb2024 {
+rule Actor_APT_RU_Turla_MAL_WIN_DLL_Implant_TinyTurla_Strings_FEB24 {
     meta:
         Description = "Detects Tiny Turla Implant used by Turla APT based on match strings"
         author = "Yashraj Solanki - Cyber Threat Intelligence Analyst at Bridewell"
