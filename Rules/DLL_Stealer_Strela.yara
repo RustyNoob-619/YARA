@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule DLL_Stealer_Strela_March2024 {
+rule MAL_WIN_DLL_Stealer_Strela_MAR24 {
     meta:
         Description = "Detects Strela Stealer malware used in a Large-Scale Campaign in Early 2024"
         Author = "RustyNoob619"
