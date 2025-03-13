@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule DLL_RAT_Xeno_Feb2024 {
+rule MAL_WIN_DLL_RAT_Xeno_PEProperties_FEB4 {
     meta:
         Description = "Detects Xeno RAT malware based on PE properties"
         Author = "RustyNoob619"
