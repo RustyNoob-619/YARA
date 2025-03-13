@@ -1,6 +1,6 @@
 import "elf"
 
-rule ELF_Backdoor_ZipLine_Feb2024 {
+rule MAL_LNX_ELF_Backdoor_ZipLine_FEB24 {
     meta:
         Description = "Detects Zipline backdoor malware samples based on ELF properties and strings"
         Author = "RustyNoob619"
