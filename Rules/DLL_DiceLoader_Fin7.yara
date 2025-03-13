@@ -1,6 +1,6 @@
 import "pe"
 
-rule Actor_APT_RU_FIN7_MAL_WIN_DLL_DiceLoader_PEProperties_FEB24 {
+rule Actor_APT_RU_FIN7_MAL_WIN_DLL_Loader_DiceLoader_PEProperties_FEB24 {
     meta:
         Description = "Detects Dice Loader malware used by Fin7 APT based on the export properties"
         Author = "RustyNoob619"
