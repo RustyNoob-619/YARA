@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule APT_CN_Stately_Taurus_DLL_Backdoor_April2024 {
+rule Actor_APT_CN_Stately_Taurus_MAL_WIN_DLL_Backdoor_April2024 {
     meta:
         Description = "Detects malware used by Chinese APT Stately Taurus aka Mustang Panda targeting ASEAN entities"
         Author = "RustyNoob619"
