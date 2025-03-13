@@ -1,6 +1,6 @@
 import "pe"
 
-rule Actor_APT_RU_Turla_MAL_WIN_DLL_Implant_TinyTurla_PE_Properties_Feb2024 {
+rule Actor_APT_RU_Turla_MAL_WIN_DLL_Implant_TinyTurla_PE_Properties_FEB24 {
     meta:
         Description = "Detects Tiny Turla Implant used by Turla APT based on PE import and export properties"
         Author = "RustyNoob619"
