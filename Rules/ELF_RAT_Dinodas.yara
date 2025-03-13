@@ -1,5 +1,5 @@
 
-rule ELF_RAT_Dinodas_April2024 {
+rule MAL_LNX_ELF_RAT_Dinodas_Strings_APR24 {
     meta:
         Description = "Detects Linux Variant of Dinodas RAT"
         Author = "RustyNoob619"
