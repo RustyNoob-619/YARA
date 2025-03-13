@@ -1,4 +1,4 @@
-rule ELF_RAT_Bifrost_March2024 {
+rule MAL_LNX_ELF_RAT_Bifrost_Strings_MAR24 {
     meta:
         Description = "Detects x86 based Version of Bifrost RAT Targeting Linux"
         Author = "RustyNoob619"
