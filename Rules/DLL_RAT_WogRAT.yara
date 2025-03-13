@@ -1,7 +1,7 @@
 
 import "dotnet"
 
-rule MAL_WIN_DLL_RAT_DotNet_WogRAT_MAR24 {
+rule MAL_WIN_DLL_RAT_WogRAT_DotNet_MAR24 {
     meta:
         Description = "Detects the Windows Version of WogRAT malware Developed in .NET"
         Author = "RustyNoob619"
