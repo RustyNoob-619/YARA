@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_BankingTrojan_Coyote_Feb2024 {
+rule MAL_WIN_DLL_Trojan_Coyote_PEProperties_FEB24 {
     meta:
         Description = "Detects Coyote malware samples based on the PE properties"
         Author = "RustyNoob619"
