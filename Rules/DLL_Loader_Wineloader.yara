@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_Loader_Wineloader_March2024 {
+rule Actor_SpikedWine_MAL_WIN_DLL_Loader_Wineloader_MAR24 {
     meta:
         Description = "Detects Wineloader malware used by the SpikedWine Threat Actor in campaigns against European Diplomats"
         Author = "RustyNoob619"
