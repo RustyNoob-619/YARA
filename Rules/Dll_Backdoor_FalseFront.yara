@@ -1,6 +1,6 @@
 import "pe"
-// naming convention for YARA rules: File Type, General type, Malware type, Malware name and date
-rule Dll_Backdoor_FalseFront_Jan2024 {
+
+rule Actor_APT_IR_PeachSandstorm_MAL_WIN_Dll_Backdoor_FalseFront_JAN24 {
     meta:
         Description = "Identifies a backdoor known as FalseFront which was used by Peach Sandstorm"
         Author = "RustyNoob619"
