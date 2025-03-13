@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_Banking_Trojan_Chavecloak_March2024 {
+rule MAL_WIN_DLL_Trojan_Chavecloak_PEProperties_MAR24 {
     meta:
         Description = "Detects the lightshot DLL (Final Payload) which is the Chavecloak Banking Trojan which was used to target banks in Brazil"
         Author = "RustyNoob619"
