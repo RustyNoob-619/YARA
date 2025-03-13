@@ -1,6 +1,6 @@
 import "elf"
 
-rule ELF_Rust_Executable_Feb2024 {
+rule File_LNX_ELF_Rust_Executable_FEB24 {
     meta:
         Description = "Detects ELF executables written in Rust and complied using GNU GCC compiler"
         Author = "RustyNoob619"
@@ -24,7 +24,7 @@ rule ELF_Rust_Executable_Feb2024 {
     
  }
 
-rule ELF_Loader_KrustyLoader_Feb2024 {
+rule MAL_LNX_ELF_Loader_KrustyLoader_FEB24 {
     meta:
         Description = "Detects Krusty Loader written in Rust which was linked to Ivanti ConnectSecure compromises"
         Author = "RustyNoob619"
