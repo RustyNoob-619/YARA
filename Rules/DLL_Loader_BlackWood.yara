@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_Loader_BlackWood_Jan2024 {
+rule Actor_APT_BlackWood_MAL_WIN_DLL_Loader_JAN24 {
     meta:
         Description = "Detects the Dll Loader for the NSPX30 implant used by the Black Wood APT"
         Author = "RustyNoob619"
