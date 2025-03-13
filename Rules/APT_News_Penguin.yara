@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule Actor_APT_NewsPenguin_MAL_WIN_DLL_FEB2024 {
+rule Actor_APT_NewsPenguin_MAL_WIN_DLL_FEB24 {
     meta:
         Description = "Detects a DLL that was part of the tooling used by News Penguin to target orgs in Pakistan"
         Author = "RustyNoob619"
