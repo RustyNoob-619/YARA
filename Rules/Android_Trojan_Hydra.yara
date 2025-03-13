@@ -1,4 +1,4 @@
-rule MAL_Android_Trojan_Hydra_Strings_APR2024
+rule MAL_Android_Trojan_Hydra_Strings_APR24
 {
     meta:
         description = "Detects Hydra Android malware samples based on the strings matched"
