@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_Loader_Pikabot_March2024 {
+rule MAL_WIN_DLL_Loader_Pikabot_MAR24 {
     meta:
         Description = "Detects Pikabot Loader malware based on PE import & export properties"
         Author = "RustyNoob619"
