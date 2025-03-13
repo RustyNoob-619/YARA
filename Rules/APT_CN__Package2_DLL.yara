@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule APT_CN__Package2_DLL_April2024 {
+rule Actor_APT_CN_Unknown_MAL_DLL_Package2_April2024 {
     meta:
         Description = "Detects malware (Package 2) used by a Chinese APT targeting ASEAN entities"
         Author = "RustyNoob619"
@@ -29,7 +29,7 @@ rule APT_CN__Package2_DLL_April2024 {
  }
 
 
-rule APT_CN__Package2_EXE_April2024 {
+rule Actor_APT_CN_Unknown_MAL_EXE_Package2_April2024 {
     meta:
         Description = "Detects malware (Package 2) used by a Chinese APT targeting ASEAN entities"
         Author = "RustyNoob619"
