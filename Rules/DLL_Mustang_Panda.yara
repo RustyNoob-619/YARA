@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_Mustang_Panda_March2024 {
+rule Actor_APT_CN_MustangPanda_MAL_WIN_DLL_Unknown_MAR24 {
     meta:
         Description = "Detects a malicious DLL used by Mustang Panda (aka TA416) in a New Year Themed Campaign"
         Author = "RustyNoob619"
