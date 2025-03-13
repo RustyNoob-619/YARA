@@ -1,5 +1,5 @@
 
-rule ELF_Implant_COATHANGER_Feb2024 {
+rule MAL_LNX_ELF_Implant_COATHANGER_FEB24 {
     meta:
         Description = "Detects COTHANGER malware that spawns a BusyBox Reverse Shell "
         Author = "RustyNoob619"
