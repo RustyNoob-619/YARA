@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_Stealer_Ov3rStealer_Feb2024 {
+rule MAL_WIN_DLL_Stealer_Ov3rStealer_FEB24 {
     meta:
         Description = "Detects Ov3r Stealer spread through FaceBook Ads"
         Author = "RustyNoob619"
