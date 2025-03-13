@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_PyPi_Loader_Lazarus_March2024 {
+rule Actor_APT_DPRK_Lazarus_MAL_WIN_DLL_Loader_PDB_MAR24 {
     meta:
         Description = "Detects the Loader component of the Malicious PyPi Packages distributed by Lazarus Group based on PDB Paths"
         Author = "RustyNoob619"
