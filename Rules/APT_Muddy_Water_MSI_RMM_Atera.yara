@@ -1,5 +1,5 @@
 
-rule Actor_APT_IR_Muddy_Water_File_WIN_MSI_RMM_Atera_April2024 {
+rule Actor_APT_IR_Muddy_Water_File_WIN_MSI_RMM_Atera_APR2024 {
     meta:
         Description = "Detects suspicious use of MSI Packages serving RMM Tool Atera used by APT Muddy Water in their Iron Swords Campaign"
         Author = "RustyNoob619"
