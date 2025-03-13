@@ -1,4 +1,4 @@
-rule XamaliciousAndroidStrings
+rule MAL_Android_Xamalicious_Strings_APR24
 {
     meta:
         description = "Detects Xamalicious Android malware samples based on the strings matched"
