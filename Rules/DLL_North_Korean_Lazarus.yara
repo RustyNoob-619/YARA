@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule DLL_North_Korean_Lazarus_March2024 {
+rule Actor_APT_DPRK_Lazarus_MAL_WIN_DLL_Unknown_MAR24 {
     meta:
         Description = "Detects a malicious DLL used by a North Korean Threat actor Lazarus"
         Author = "RustyNoob619"
