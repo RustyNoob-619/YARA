@@ -1,6 +1,6 @@
 import "elf"
 
-rule ELF_Rust_Executable_Feb2024 {
+rule File_ELF_Rust_Executable_FEB24 {
     meta:
         Description = "Detects ELF executables written in Rust and complied using GNU GCC compiler"
         Author = "RustyNoob619"
