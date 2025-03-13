@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_Unknown_China_Feb2024 {
+rule MAL_WIN_DLL_CN_Unknown_PEProperties_FEB24 {
     meta:
         Description = "Detects an unknown suspicious DLL with Chinise artifacts that appears to impersonate Easy Language Program"
         Author = "RustyNoob619"
