@@ -1,6 +1,6 @@
 import "pe"
 
-rule DLL_PyPi_Comebacker_Lazarus_March2024 {
+rule Actor_APT_DPRK_Lazarus_MAL_WIN_DLL_Backdoor_Comebacker_MAR24 {
     meta:
         Description = "Detects the Combacker malware used in Malicious PyPi Packages by Lazarus"
         Author = "RustyNoob619"
