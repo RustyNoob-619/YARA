@@ -1,5 +1,5 @@
 
-rule ELF_Wiper_AcidRain_March2024 {
+rule MAL_LNX_ELF_Wiper_AcidRain_Strings_MAR24 {
     meta:
         Description = "Detects the Acid Rain Wiper Malware"
         Author = "RustyNoob619"
