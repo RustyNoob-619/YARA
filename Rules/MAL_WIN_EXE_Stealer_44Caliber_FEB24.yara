@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Stealer_44Caliber_Feb2024 {
+rule MAL_WIN_EXE_Stealer_44Caliber_FEB24 {
     meta:
         Description = "Detects 44 Caliber Stealer malware based on strings"
         Author = "RustyNoob619"
