@@ -1,6 +1,6 @@
 import "pe"
 
-rule TTP_Signed_Impersonating_Microsoft_Feb2024
+rule SUS_WIN_PE_CodeSignCert_Impersonating_Microsoft_Feb2024
 {
   meta:
     author = "RustyNoob619"
