@@ -1,4 +1,4 @@
-rule SLugRansomwareNote
+rule MAL_WIN_PE_Ransomware_SLug_RansomwareNoteStrings_JAN24
 {
     meta:
         description = "Detects the ransomware note of the Slug ransomware group"
