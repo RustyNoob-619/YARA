@@ -1,6 +1,6 @@
 import "pe"
 
-rule TTP_Chinese_Dropper_March2024
+rule File_WIN_PE_Chinese_Dropper_MAR24
 {
   meta:
     author = "RustyNoob619"
