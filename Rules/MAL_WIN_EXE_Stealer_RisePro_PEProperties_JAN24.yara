@@ -1,5 +1,5 @@
 import "pe"
-rule EXE_Stealer_RisePro_Jan2024 {
+rule MAL_WIN_EXE_Stealer_RisePro_PEProperties_JAN24 {
     meta:
         Description = "Detects Rise Pro Stealer samples based on properties in the resources, manifest settings and PE Rich Header"
         Author = "RustyNoob619"
