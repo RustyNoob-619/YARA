@@ -1,7 +1,7 @@
 import "pe"
 import "math"
 
-rule EXE_Unknown_Backdoor_March2024 {
+rule MAL_WIN_EXE_Backdoor_Unknown_MAR24 {
     meta:
         Description = "Detects an unknown backdoor"
         Author = "RustyNoob619"
