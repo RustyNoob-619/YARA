@@ -13,7 +13,7 @@ rule Signed_Certificate_D2_Innovation_Feb2024 {
           
  }
 
-rule EXE_Stealer_TrollStealer_Feb2024 {
+rule MAL_WIN_EXE_Stealer_TrollStealer_FEB24 {
     meta:
         Description = "Detects Troll Stealer malware used by Kimsuky based on the PE export properties"
         Author = "RustyNoob619"
@@ -25,7 +25,6 @@ rule EXE_Stealer_TrollStealer_Feb2024 {
         and pe.dll_name == "golang.dll"
         and pe.export_details[0].name == "_cgo_dummy_export" 
         and for 9 export in pe.export_details:
-        (export.name endswith "Trampoline")
-       
+        (export.name endswith "Trampoline") 
  }
 
