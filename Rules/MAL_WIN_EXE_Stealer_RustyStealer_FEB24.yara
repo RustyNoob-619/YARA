@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_Stealer_RustyStealer_Feb2024 {
+rule MAL_WIN_EXE_Stealer_RustyStealer_FEB24 {
     meta:
         Description = "Detects Rusty Stealer malware"
         Author = "RustyNoob619"
