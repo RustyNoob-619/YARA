@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_Stealer_Azorult_March2024 {
+rule MAL_WIN_EXE_Stealer_Azorult_Strings_MAR24 {
     meta:
         Description = "Detects Azorult infostealer malware based on matched strings and PE Properties"
         Author = "RustyNoob619"
