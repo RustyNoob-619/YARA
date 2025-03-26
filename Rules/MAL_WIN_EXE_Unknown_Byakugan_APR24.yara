@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Unknown_Byakugan_April2024 {
+rule MAL_WIN_EXE_Unknown_Byakugan_APR24 {
     meta:
         Description = "Detects Byakugan malware based on the PE properties"
         Author = "RustyNoob619"
