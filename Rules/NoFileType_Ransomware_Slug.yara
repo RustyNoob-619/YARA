@@ -21,7 +21,9 @@ rule SLugRansomwareNote
        
         
     condition:
-        any of ($str*) and 7 of ($txt*) 
+        uint16(0) == 0x5A4D
+        and any of ($str*) 
+        and 7 of ($txt*) 
         
 }
 
