@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Stealer_WhiteSnake_Jan2024 {
+rule MAL_WIN_EXE_Stealer_WhiteSnake_JAN24 {
     meta:
         Description = "Detects White Snake Stealer samples based on network strings and dotnet resources"
         author = "Yashraj Solanki - Cyber Threat Intelligence Analyst at Bridewell"
