@@ -1,4 +1,4 @@
-rule Tool_Utility_SoCat_Strings_FEB24
+rule File_Tool_Utility_SoCat_Strings_FEB24
 {
     meta:
         description = "Detects A modified version of SoCat tool used by Sea Turtle to setup a command-and-control channel. "
