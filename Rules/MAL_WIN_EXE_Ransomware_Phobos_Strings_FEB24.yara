@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Ransomware_Phobos_Feb2024 {
+rule MAL_WIN_EXE_Ransomware_Phobos_Strings_FEB24 {
     meta:
         Description = "Detects Phobos Ransomware that was used to attack hospitals in Romania"
         Author = "RustyNoob619"
