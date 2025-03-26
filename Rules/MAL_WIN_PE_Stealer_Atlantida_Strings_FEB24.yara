@@ -1,5 +1,5 @@
 
-rule AtlantidaStealer
+rule MAL_WIN_PE_Stealer_Atlantida_Strings_FEB24
 {
   meta:
     description = "Detects the Atlantida Stealer malware based on matched strings"
