@@ -1,5 +1,5 @@
 
-rule tool_WIN_EXE_NetworkTunelling_Chisel_FEB25
+rule File_Tool_WIN_EXE_NetworkTunelling_Chisel_FEB25
 {
   meta:
     author = "RustyNoob619"
