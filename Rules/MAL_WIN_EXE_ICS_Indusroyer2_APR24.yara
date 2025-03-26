@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_ICS_Indusroyer2_April2024 {
+rule MAL_WIN_EXE_ICS_Indusroyer2_APR24 {
     meta:
         Description = "Detects Industroyer2 ICS malware targeting IEC-104 protocol"
         Author = "RustyNoob619"
