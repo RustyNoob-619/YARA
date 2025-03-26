@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Stealer_StealC_Feb2024 {
+rule MAL_WIN_EXE_Stealer_StealC_PEProperties_FEB24 {
     meta:
         Description = "Detects Stealc malware samples based on PE properties"
         Author = "RustyNoob619"
