@@ -1,7 +1,7 @@
 import "pe"
 import "math"
 
-rule EXE_Python_Stealer_Jan2024 {
+rule MAL_WIN_EXE_Stealer_Python_JAN24 {
     meta:
         Description = "Detects Python Stealer based on generic strings and high entropy in resources"
         Author = "RustyNoob619"
