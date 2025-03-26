@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_RAT_vxRAT_March2024 {
+rule MAL_WIN_EXE_RAT_vxRAT_MAR24 {
     meta:
         Description = "Detects the Open Source RAT known as vxRAT"
         Author = "RustyNoob619"
