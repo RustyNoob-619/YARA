@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_Stealer_Planet_March2024
+rule MAL_WIN_EXE_Stealer_Planet_PEProperties_MAR24
 {
   meta:
     author = "RustyNoob619"
