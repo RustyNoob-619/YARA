@@ -1,5 +1,5 @@
 
-rule File_SYS_CrowdStrike
+rule File_SYS_CrowdStrike_MAR24
 {
   meta:
     author = "RustyNoob619"
