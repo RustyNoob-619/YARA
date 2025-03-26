@@ -1,4 +1,4 @@
-rule MimicRansomwareStrings
+rule MAL_WIN_EXE_Ransomware_Mimic_Strings_MAR24
 {
     meta:
         description = "Detects Mimic ransomware samples based on the strings matched"
