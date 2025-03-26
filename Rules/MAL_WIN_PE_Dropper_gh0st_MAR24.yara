@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_gh0st_Dropper_first_stage_March2024
+rule MAL_WIN_EXE_Dropper_gh0st_first_stage_MAR24
 {
   meta:
     author = "RustyNoob619"
@@ -19,7 +19,7 @@ rule EXE_gh0st_Dropper_first_stage_March2024
     
 }
 
-rule DLL_gh0st_Dropper_second_stage_March2024
+rule MAL_WIN_DLL_Dropper_gh0st_second_stage_MAR24
 {
   meta:
     author = "RustyNoob619"
