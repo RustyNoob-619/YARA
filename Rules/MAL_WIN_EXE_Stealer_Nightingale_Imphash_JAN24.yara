@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Stealer_Nightingale_Imphash_Jan2024 {
+rule MAL_WIN_EXE_Stealer_Nightingale_Imphash_JAN24 {
     meta:
         Description = "Detects Nightingale Stealer samples based on the import hash"
         Author = "RustyNoob619"
