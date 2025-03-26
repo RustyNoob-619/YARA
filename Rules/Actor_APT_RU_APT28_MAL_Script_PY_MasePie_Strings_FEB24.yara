@@ -1,4 +1,4 @@
-rule MasePiePython
+rule Actor_APT_RU_APT28_MAL_Script_PY_MasePie_Strings_FEB24
 {
   meta:
     description = "Detects the Masepie malware Python script based on matched strings"
