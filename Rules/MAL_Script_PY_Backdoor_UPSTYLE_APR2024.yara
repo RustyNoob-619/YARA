@@ -1,4 +1,4 @@
-rule Script_Python_Backdoor_UPSTYLE_April2024 {
+rule MAL_Script_PY_Backdoor_UPSTYLE_APR2024 {
     meta:
         Description = "Detects the UPSTYLE Python Backdoor used in the Zero-Day exploitation (CVE-2024-3400) against Palo Alto Devices"
         Author = "RustyNoob619"
