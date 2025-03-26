@@ -1,5 +1,5 @@
 import "pe"
-rule EXE_Stealer_Elusive_Feb2024 {
+rule MAL_WIN_EXE_Stealer_Elusive_Strings_FEB24 {
     meta:
         Description = "Detects Elusive Stealer malware"
         Author = "RustyNoob619"
