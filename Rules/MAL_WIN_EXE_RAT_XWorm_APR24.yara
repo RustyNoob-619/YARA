@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_RAT_XWorm_April2024 {
+rule MAL_WIN_EXE_RAT_XWorm_APR24 {
     meta:
         Description = "Detects XWorm RAT malware based on the matched strings"
         Author = "RustyNoob619"
