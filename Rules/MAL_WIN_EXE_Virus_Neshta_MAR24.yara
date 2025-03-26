@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Virus_Neshta_March2024 {
+rule MAL_WIN_EXE_Virus_Neshta_MAR24 {
     meta:
         Description = "Detects Neshta malware which is a 2005 Belarusian file infector virus written in Delphi"
         Author = "RustyNoob619"
