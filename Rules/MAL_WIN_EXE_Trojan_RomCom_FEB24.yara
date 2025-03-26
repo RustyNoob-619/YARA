@@ -1,7 +1,7 @@
 import "pe"
 import "math"
 
-rule EXE_Trojan_RomCom_Specific_Feb2024 {
+rule MAL_WIN_EXE_Trojan_RomCom_Specific_FEB24 {
     meta:
         Description = "Detects malware used by RomCom Threat Actor based on import hash"
         Author = "RustyNoob619"
@@ -13,7 +13,7 @@ rule EXE_Trojan_RomCom_Specific_Feb2024 {
        pe.imphash() == "48b74a60787e54387294ac125b7ed128"       
  }
 
- rule EXE_Trojan_RomCom_Broad_Feb2024 {
+ rule MAL_WIN_EXE_Trojan_RomCom_Broad_FEB24 {
     meta:
         Description = "Detects malware used by RomCom Threat Actor based on high resource entropy and other PE Import characteristics"
         Author = "RustyNoob619"
