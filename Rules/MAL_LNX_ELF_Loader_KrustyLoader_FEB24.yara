@@ -1,6 +1,6 @@
 import "elf"
 
-rule File_LNX_ELF_Rust_Executable_FEB24 {
+rule MAL_LNX_ELF_Loader_KrustyLoader_FEB24 {
     meta:
         Description = "Detects ELF executables written in Rust and complied using GNU GCC compiler"
         Author = "RustyNoob619"
