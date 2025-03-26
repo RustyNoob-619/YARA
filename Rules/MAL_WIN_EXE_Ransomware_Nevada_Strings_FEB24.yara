@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Ransomware_Nevada_Feb2024 {
+rule MAL_WIN_EXE_Ransomware_Nevada_Strings_FEB24 {
     meta:
         Description = "Detects Nevada ransomware aka Nokoyawa ransomware 2.1"
         Author = "RustyNoob619"
