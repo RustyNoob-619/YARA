@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_Loader_XDealer_March2024 {
+rule Actor_APT_CN_EarthKrahang_MAL_WIN_EXE_Loader_XDealer_MAR24 {
     meta:
         Description = "Detects Loader used to deliver the XDealer Malware which is used by Chinese APT Earth Krahang "
         Author = "RustyNoob619"
