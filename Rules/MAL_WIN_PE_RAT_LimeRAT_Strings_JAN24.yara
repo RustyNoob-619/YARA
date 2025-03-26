@@ -1,4 +1,4 @@
-rule LimeRAT
+rule MAL_WIN_PE_RAT_LimeRAT_Strings_JAN24
 {
     meta:
         description = "Detects Lime RAT malware samples based on the strings matched"
