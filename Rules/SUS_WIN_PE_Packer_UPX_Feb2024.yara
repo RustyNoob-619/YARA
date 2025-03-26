@@ -1,6 +1,6 @@
 import "pe"
 
-rule TTP_Packer_UPX_Feb2024
+rule SUS_WIN_PE_Packer_UPX_Feb2024
 {
     meta:
         author = "RustyNoob619"
