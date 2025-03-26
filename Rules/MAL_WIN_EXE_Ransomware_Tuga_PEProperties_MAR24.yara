@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_Ransomware_Tuga_March2024
+rule MAL_WIN_EXE_Ransomware_Tuga_PEProperties_MAR24
 {
   meta:
     author = "RustyNoob619"
