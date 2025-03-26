@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule SUS_WIN_PE_CodeSignCert_Impersonating_Google_Updates_March2024 {
+rule SUS_WIN_PE_CodeSignCert_Impersonating_Google_Updates_MAR24 {
     meta:
         Description = "Detects Windows executables which are impersonating Google Update utilities"
         Author = "RustyNoob619"
