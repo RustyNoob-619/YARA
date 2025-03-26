@@ -1,5 +1,5 @@
 
-rule EXE_Backdoor_OceanMap_March2024 {
+rule Actor_APT_RU_APT28_MAL_WIN_EXE_Backdoor_OceanMap_MAR24 {
     meta:
         Description = "Detects Ocean Map Backdoor used by Russian Threat Group APT28"
         Author = "RustyNoob619"
