@@ -1,4 +1,4 @@
-rule LNK_Dropper_Russian_APT_Feb2024 {
+rule Actor_APT_RU_MAL_WIN_LNK_Dropper_Unknown_Feb2024 {
     meta:
         Description = "Detects LNK dropper samples used by a Russian APT during a past campaign"
         Author = "RustyNoob619"
