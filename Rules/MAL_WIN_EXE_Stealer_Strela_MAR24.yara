@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_Stealer_Strela_March2024 {
+rule MAL_WIN_EXE_Stealer_Strela_MAR24 {
     meta:
         Description = "Detects Strela Stealer malware primarily based on the PE Imphash"
         Author = "RustyNoob619"
