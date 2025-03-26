@@ -1,5 +1,5 @@
 
-rule TAR_Utility_XZ_Utils_March2024
+rule Tool_TAR_Utility_XZ_Utils_MAR2024
 {
   meta:
     author = "RustyNoob619"
