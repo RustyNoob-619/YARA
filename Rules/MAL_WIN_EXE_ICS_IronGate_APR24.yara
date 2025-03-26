@@ -1,5 +1,5 @@
 
-rule EXE_ICS_IronGate_April2024 {
+rule MAL_WIN_EXE_ICS_IronGate_APR24 {
     meta:
         Description = "Detects Iron Gate ICS malware targeting simulation environment which appears to be a PoC"
         Author = "RustyNoob619"
