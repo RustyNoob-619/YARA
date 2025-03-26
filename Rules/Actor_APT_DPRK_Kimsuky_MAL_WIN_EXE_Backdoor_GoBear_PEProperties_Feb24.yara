@@ -1,6 +1,6 @@
 import "pe"
 
-rule Signed_Certificate_D2_Innovation_Feb2024 {
+rule Actor_APT_DPRK_Kimsuky_Signed_Certificate_D2_Innovation_FEB24 {
     meta:
         Description = "This is a legitimate Code Signing Certificate Stolen and used by Kimsuky"
         Author = "RustyNoob619"
@@ -13,7 +13,7 @@ rule Signed_Certificate_D2_Innovation_Feb2024 {
           
  }
 
-rule TTP_Weird_symbols_In_Exports_Feb2024 {
+rule TTP_Weird_symbols_In_Exports_FEB24 {
     meta:
         Description = "Leverages a specific sequence of symbols in the export names as a TTP"
         Procedure_Examples = "Currently seen with the Go Bear Backdoor used by Kimsuky"
@@ -25,7 +25,7 @@ rule TTP_Weird_symbols_In_Exports_Feb2024 {
 
 }
 
-rule EXE_Backdoor_GoBear_Feb2024 {
+rule Actor_APT_DPRK_Kimsuky_MAL_WIN_EXE_Backdoor_GoBear_PEProperties_Feb24 {
     meta:
         Description = "Detects the Go Bear Backdoor used by Kimsuky based on the PE export property"
         Author = "RustyNoob619"
