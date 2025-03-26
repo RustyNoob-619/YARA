@@ -1,4 +1,4 @@
-rule EXE_Stealer_Phemedrone_Feb2024 {
+rule MAL_WIN_EXE_Stealer_Phemedrone_Strings_FEB24 {
     meta:
         Description = "Detects Phemedrone Stealer malware samples"
         Author = "RustyNoob619"
