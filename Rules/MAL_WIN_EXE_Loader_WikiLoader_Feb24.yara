@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Loader_WikiLoader_Feb2024 {
+rule MAL_WIN_EXE_Loader_WikiLoader_Feb24 {
     meta:
         Description = "Detects Wiki Loader samples based on PE import & export properties"
         Author = "RustyNoob619"
