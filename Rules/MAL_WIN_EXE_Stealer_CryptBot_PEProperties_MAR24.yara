@@ -1,6 +1,6 @@
 import "pe"
 
-rule EXE_Stealer_CryptBot_March2024 {
+rule MAL_WIN_EXE_Stealer_CryptBot_PEProperties_MAR24 {
     meta:
         Description = "Detects a new version of CryptBot Stealer"
         Author = "RustyNoob619"
