@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule EXE_ICS_Triton_April2024 {
+rule MAL_WIN_EXE_ICS_Triton_APR24 {
     meta:
         Description = "Detects Triton ICS malware used to target SIS (Safety Instrumentation Systems)"
         Author = "RustyNoob619"
