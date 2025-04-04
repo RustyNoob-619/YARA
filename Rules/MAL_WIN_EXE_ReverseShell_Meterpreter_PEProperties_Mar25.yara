@@ -1,7 +1,7 @@
 
 import "pe"
 
-rule MAL_WIN_EXE_ReverseShell_Meterpreter_PEProperties_Mar25
+rule SUS_WIN_EXE_Unknown_FakePutty_PEProperties_Mar25
 {
     meta:
         rule_id = "21aa4193-70bd-4b0a-a6f4-c7c16ed594a0"
