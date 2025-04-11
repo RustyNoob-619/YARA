@@ -4,7 +4,7 @@ rule MAL_WIN_EXE_Ransomware_Medusa_RansomNoteStrings_Mar25
     meta:
         rule_id = "17febe5b-6d71-4176-9fc9-c94851a75287"
         date = "25-03-2025"
-        author = "Bridewell CTI"
+        author = "RustyNoob619"
         description = "Detects Windows Targeting Ransomware called Medusa based on the ransomware note strings"
         source = "https://github.com/ThreatLabz/ransomware_notes/blob/main/medusa/!!!READ_ME_MEDUSA!!!.txt"
         filehash = "Unknown"
