@@ -6,7 +6,7 @@ rule SUS_WIN_EXE_Unknown_FakePutty_PEProperties_Mar25
     meta:
         rule_id = "21aa4193-70bd-4b0a-a6f4-c7c16ed594a0"
         date = "25-03-2025"
-        author = "Bridewell CTI"
+        author = "RustyNoob619"
         description = "Detects a Windows Reverse Shell impersonating Putty Client with malware config properties of Meterpreter"
         source = "https://www.cisa.gov/sites/default/files/2025-03/aa25-071a-stopransomware-medusa-ransomware.pdf"
         filehash = "baa980ae253101066ae7e551a354116454e8697ff2154a907c9885770cdae4ae"
