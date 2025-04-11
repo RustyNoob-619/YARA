@@ -6,7 +6,7 @@ rule MAL_WIN_EXE_Ransomware_Medusa_PDBPath_Mar25
     meta:
         rule_id = "c58cde32-c6a1-4cc2-9620-81ce7189ffd0"
         date = "25-03-2025"
-        author = "Bridewell CTI"
+        author = "RustyNoob619"
         description = "Detects Windows Targeting Ransomware called Medusa based on the the PDB artifact"
         source = "https://any.run/malware-trends/medusa/"
         filehash = "3a6d5694eec724726efa3327a50fad3efdc623c08d647b51e51cd578bddda3da"
