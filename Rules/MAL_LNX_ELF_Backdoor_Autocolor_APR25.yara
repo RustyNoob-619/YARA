@@ -5,6 +5,7 @@ rule MAL_LNX_ELF_Backdoor_Autocolor_APR25
     meta:
         rule_id = "a31dd4f1-e9b1-466b-a982-8aa2f613db66"
         date = "25-03-2025"
+        last_update = "30-07-2025"
         author = "RustyNoob619"
         description = "Detects ELF backdoor known as Auto-Color"
         source = "https://unit42.paloaltonetworks.com/new-linux-backdoor-auto-color/"
@@ -15,7 +16,8 @@ rule MAL_LNX_ELF_Backdoor_Autocolor_APR25
         $str2 = "%s/auto-color" fullword
 
     condition:
-        elf.telfhash() == "t12a11a81b993d07a889a65d35ed2507e38087d23aa062e714ff54eec0645f446f12ce8f"
+        (elf.telfhash() == "t12a11a81b993d07a889a65d35ed2507e38087d23aa062e714ff54eec0645f446f12ce8f"
+        or elf.telfhash() ==t12a11a81b993d07a889a65d35ed2507e38087d23aa062e714ff54eec0645f446f12ce8f)
         and any of them
-        and filesize < 250KB
+        and filesize < 500KB
 }
