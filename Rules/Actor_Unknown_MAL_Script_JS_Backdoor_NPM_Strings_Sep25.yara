@@ -5,7 +5,7 @@ rule Actor_Unknown_MAL_Script_JS_Backdoor_NPM_Strings_Sep25
         rule_id = "bf9b9e7a-3020-40f3-b592-d1bfc92e7169"
         date = "09-09-2025"
         author = "RustyNoob619"
-        description = "Detects MalwareX used by ActorY based on "
+        description = "Detects Compromised NPM Malicious Packages Based on Observed Strings"
         source1 = "https://x.com/cyb3rops/status/1965121934427029564"
         source2 = "https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack"
         credits = "@cyb3rops for sharing the file sample"
