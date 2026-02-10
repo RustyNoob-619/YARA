@@ -10,7 +10,42 @@ ooxml.c: add to yara-4.5.x => libyara => modules => ooxml -> ooxml.c
 
 ooxml.h: add to yara-4.5.x => libyara => include => yara -> ooxml.h
 
+test-ooxml.c: add to yara-4.5.x => tests -> test-ooxml.c
+
 ooxml.md: add to yara-4.5.x => docs => modules -> ooxml.md
+
+The below three files already exist in your YARA directory, you can either modify them or paste over the entire files. It is recommended to simply edit the existing files as different versions of YARA might have varying file content. For reference, the modified versions of these three files have also been added to the File Structure folder.
+
+1. Navigate to yara-4.5.x => libyara => modules -> modules_list and add the following lines to the end of the file
+
+```
+#ifdef OOXML_MODULE
+MODULE(ooxml)
+#endif
+```
+
+2. Navigate to yara-4.5.x -> MakeFile.am and add the following lines in certain sections of the file. Search for similar module names and insert the lines accordingly.
+
+//During the first few sections in the file
+```
+if OOXML_MODULE
+MODULES += libyara/modules/ooxml/ooxml.c
+endif
+```
+//Towards end of the file, search for *check_PROGRAMS =* and insert the below anywhere in between
+```
+test-ooxml \
+```
+//Towards end of the file, add the below lines
+```
+if OOXML_MODULE
+check_PROGRAMS+=test-ooxml
+test_ooxml_SOURCES = tests/test-ooxml.c tests/util.c
+test_ooxml_LDADD = libyara.la
+test_ooxml_LDFLAGS = -static
+endif
+```
+
 
 After pasting the above files in their respective directories, run the following commands from your YARA root directory:
 
