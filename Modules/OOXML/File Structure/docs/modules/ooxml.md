@@ -10,7 +10,9 @@ The module does not extract the identified file entries from the central directo
 ## Module Structure
 
 type is_ooxml
+
 Return true if file matches characteristics of an OOXML file.  
+
 *Example: ooxml.is_ooxml*
 
 type number_of_on_disk_entries
