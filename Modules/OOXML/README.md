@@ -2,19 +2,19 @@ OOXML YARA module is used to parse OOXML file formats that are typically found i
 
 Below are the instructions to install this module in YARA. The module has been tested on YARA 4.5.4. For details on the module usage and functions, please see ooxml.md file here: https://github.com/RustyNoob-619/YARA/blob/main/Modules/OOXML/File%20Structure/docs/modules/ooxml.md
 
-NOTE: The files in the File Structure folder on this repository are arranged based on where they are located in your YARA directory.
+**NOTE**: The files in the File Structure folder on this repository are arranged based on where they are located in your YARA directory.
 
 Navigate to the File Structure folder and add the following files to their respective locations in your YARA root directory:
 
-ooxml.c: add to yara-4.5.x => libyara => modules => ooxml -> ooxml.c
+- ooxml.c: add to yara-4.5.x => libyara => modules => ooxml -> ooxml.c
 
-ooxml.h: add to yara-4.5.x => libyara => include => yara -> ooxml.h
+- ooxml.h: add to yara-4.5.x => libyara => include => yara -> ooxml.h
 
-test-ooxml.c: add to yara-4.5.x => tests -> test-ooxml.c
+- test-ooxml.c: add to yara-4.5.x => tests -> test-ooxml.c
 
-ooxml.md: add to yara-4.5.x => docs => modules -> ooxml.md
+- ooxml.md: add to yara-4.5.x => docs => modules -> ooxml.md
 
-The below three files already exist in your YARA directory, you can either modify them or paste over the entire files. It is recommended to simply edit the existing files as different versions of YARA might have varying file content. For reference, the modified versions of these three files have also been added to the File Structure folder.
+The below three files already exist in your YARA directory, you can either modify them or paste over the entire files. It is recommended to simply edit the existing files as different versions of YARA might have varying file content. For reference, both the original and modified versions of these three files have also been added to the File Structure folder.
 
 1. Navigate to yara-4.5.x => libyara => modules -> modules_list and add the following lines to the end of the file
 
