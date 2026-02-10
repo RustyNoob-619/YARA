@@ -24,7 +24,7 @@ MODULE(ooxml)
 #endif
 ```
 
-2. Navigate to yara-4.5.x -> MakeFile.am and add the following lines in certain sections of the file. Search for similar module names and insert the lines accordingly.
+2. Navigate to yara-4.5.x -> MakeFile.am and add the following lines in three different sections of the file. Search for similar module names and insert the lines accordingly.
 
 //During the first few sections in the file
 ```
@@ -45,7 +45,20 @@ test_ooxml_LDADD = libyara.la
 test_ooxml_LDFLAGS = -static
 endif
 ```
-
+3. Navigate to yara-4.5.x -> configure.ac and add the following lines in two different sections in the file. Search for similar module names and insert the lines accordingly.
+//Towards first half of the file
+```
+AC_ARG_ENABLE([ooxml],
+  [AS_HELP_STRING([--enable-ooxml], [enable ooxml module])],
+  [if test x$enableval = xyes; then
+    build_ooxml_module=true
+    CFLAGS="$CFLAGS -DOOXML_MODULE"
+  fi])
+```
+//Towards end of the file
+```
+AM_CONDITIONAL([OOXML_MODULE], [test x$build_ooxml_module = xtrue])
+```
 
 After pasting the above files in their respective directories, run the following commands from your YARA root directory:
 
