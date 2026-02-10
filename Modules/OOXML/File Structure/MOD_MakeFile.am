@@ -118,12 +118,12 @@ if MACHO_MODULE
 MODULES += libyara/modules/macho/macho.c
 endif
 
-if OOXML_MODULE
-MODULES += libyara/modules/ooxml/ooxml.c
-endif
-
 if DEX_MODULE
 MODULES += libyara/modules/dex/dex.c
+endif
+
+if OOXML_MODULE
+MODULES += libyara/modules/ooxml/ooxml.c
 endif
 
 if PB_TESTS_MODULE
@@ -409,13 +409,6 @@ test_dotnet_LDADD = libyara.la
 test_dotnet_LDFLAGS = -static
 endif
 
-if OOXML_MODULE
-check_PROGRAMS+=test-ooxml
-test_ooxml_SOURCES = tests/test-ooxml.c tests/util.c
-test_ooxml_LDADD = libyara.la
-test_ooxml_LDFLAGS = -static
-endif
-
 if MAGIC_MODULE
 check_PROGRAMS+=test-magic
 test_magic_SOURCES = tests/test-magic.c tests/util.c
@@ -428,6 +421,13 @@ check_PROGRAMS+=test-pb
 test_pb_SOURCES = tests/test-pb.c tests/util.c
 test_pb_LDADD = libyara.la
 test_pb_LDFLAGS = -static
+endif
+
+if OOXML_MODULE
+check_PROGRAMS+=test-ooxml
+test_ooxml_SOURCES = tests/test-ooxml.c tests/util.c
+test_ooxml_LDADD = libyara.la
+test_ooxml_LDFLAGS = -static
 endif
 
 # man pages
