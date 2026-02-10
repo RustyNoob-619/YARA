@@ -14,8 +14,12 @@ ooxml.md: add to yara-4.5.x => docs => modules -> ooxml.md
 
 After pasting the above files in their respective directories, run the following commands from your YARA root directory:
 
-./bootstrap
-./configure --enable-ooxml
-make
-make check 
-make install
+`./bootstrap`
+
+`./configure --enable-ooxml`
+
+`make`
+
+`make check` 
+
+`make install`
