@@ -16,6 +16,8 @@ Navigate to the File Structure folder and add the following files to their respe
 
 The below three files already exist in your YARA directory, you can either modify them or paste over the entire files. It is recommended to simply edit the existing files as different versions of YARA might have varying file content. For reference, both the original and modified versions of these three files have also been added to the File Structure folder. You can simply search for *ooxml* in MOD_filename within the File Structure folder in the repo to see where changes need to be made.
 
+*NOTE:* Please ensure that the indentation is correct to avoid any compile time errors.
+
 1. Navigate to yara-4.5.x => libyara => modules -> modules_list and add the following lines to the end of the file
 
 ```
