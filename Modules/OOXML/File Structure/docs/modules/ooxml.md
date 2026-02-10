@@ -16,92 +16,132 @@ Return true if file matches characteristics of an OOXML file.
 *Example: ooxml.is_ooxml*
 
 
-type number_of_on_disk_entries
+`type number_of_on_disk_entries`
+
 The number of entries in the central directory on this disk.
+
 *Example: ooxml.number_of_on_disk_entries == 15*
 
-type number_of_total_entries
+`type number_of_total_entries`
+
 Total number of entries in the central directory.
+
 *Example: ooxml.number_of_total_entries == 13*
 
 **NOTE:** Typically the value of number_of_on_disk_entries and number_of_total_entries should be identical
 
-type central_dir_size
+`type central_dir_size`
+
 Size of the central directory in bytes.
+
 *Example: ooxml.central_dir_size < 4KB*
 
-type central_dir_offset
+`type central_dir_offset`
+
 Raw offset of the start of central directory on the disk.
+
 *Example: ooxml.central_dir_offset == 0x3220* 
 
-type zip_comment_len
+`type zip_comment_len`
+
 The length of the ZIP comment field in Bytes.
+
 *Example: ooxml.zip_comment_len > 0*
 
-type zip_comment_str
+`type zip_comment_str`
+
 Optional comment for the Zip file.
+
 *Example: ooxml.zip_comment_str == "Some Random Zip Comment"*
 
 **NOTE:** Two attributes from the end of central directory record (Disk Number and Disk # w/cd) were intentionally ignored due to irrelevance of their corresponding values.
 
-type entries
+`type entries`
+
 A zero-based array of central directory entries, one for each entry the PKZIP has. Individual entries can be accessed by using the [ ] operator. Each central directory record has the following attributes:
 
 **NOTE:** In the module, no limits have been set to restrict the scanning of a given number of entries to avoid those bloated or corrupted PKZIP files which have a significant higher number of entries (i.e. more than 100)
 
-type name_string
+`type name_string`
+
 Entry's name.
+
 *Example: ooxml.entries[0].name_string == "[Content_Types].xml"*
 
-type name_length
+`type name_length`
+
 Entry's  name length in bytes.
+
 *Example: ooxml.entries[0].name_length == 19*
 
-type compressed_size NEEDS TROUBLESHOOTING, shows UNDEFINED, check test_rule_6
+`type compressed_size`
+
 Compressed size of the Entry in Bytes.
+
 *Example: ooxml.entries[3].compressed_size > 250*
 
-type uncompressed_size
+`type uncompressed_size`
+
 Uncompressed size of the Entry in Bytes.
+
 *Example: ooxml.entries[3].compressed_size == 252*
 
-type crc32_checksum
+`type crc32_checksum`
+
 Value computed over file data of an entry by CRC-32 algorithm with 'magic number' 0xdebb20e3 (little endian).
+
 *Example: ooxml.entries[5].crc32_checksum == 0x*1234567
 
-type compression_method_value UNTIL HERE
+`type compression_method_value`
+
 Raw value of the compression method used on the entry.
+
 *Example: ooxml.entries[6].compression_method_value == 0x08 //Deflated*
 
-type compression_method_name 
+`type compression_method_name` 
+
 Derived name of the compression method used on the entry based on the mappings defined in the PKZIP specification.
+
 *Example: ooxml.entries[6].compression_method_name == "Deflated"*
 
-type mod_time_raw
+`type mod_time_raw`
+
 Entry's modification time stored in standard MS-DOS format.
+
 *Example: ooxml.entries[7].mod_time_raw == 0x7d1c //15:40:36*
 
-type mod_date_raw
+`type mod_date_raw`
+
 Entry's modification date stored in standard MS-DOS format.
+
 *Example: ooxml.entries[7].mod_time_raw == 0x354b //10/11/2006*
 
-type flags
+`type flags`
+
 Raw value of general purpose bit flag for the entry
 
-type version_made_by
+`type version_made_by`
+
 Raw value that constitutes the OS name and ZIP specification version used to create the entry. Upper Byte provides the OS name and lower Byte gives the ZIP version.
+
 *Example: ooxml.entries[8].version_made_by == 0x0317 //03 -> UNIX  INT 23 -> 2.3*
 
-type os_name
+`type os_name`
+
 OS name used to create the entry which is derived from the  version_made_by raw value and the specificaiton mappings related to it.
+
 *Example: ooxml.entries[8].os_name == "Unix"*
 
-type spec_version
+`type spec_version`
+
 Raw value of ZIP specification version which is derived from the version_made_by raw value.
+
 *Example: ooxml.entries[8].spec_version == 22 //2.2*
 
-type version_needed
-PKZip version needed to extract the entry
+`type version_needed`
+
+PKZip version needed to extract the entry.
+
 *Example: ooxml.entries[8].version_needed == 20 //2.0*
 
 **NOTE:** Extra field length, File comment length, Internal/External file attributes, Extra field and file comment are yet to be implemented in the module. The rest of the properties from PKZIP specification were intentionally left out.
