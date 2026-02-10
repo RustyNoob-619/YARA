@@ -9,11 +9,12 @@ The module is built using the specification listed here https://users.cs.jmu.edu
 The module does not extract the identified file entries from the central directory but rather relies on the metadata surrounding the entries.
 ## Module Structure
 
-type is_ooxml
+`type is_ooxml`
 
 Return true if file matches characteristics of an OOXML file.  
 
 *Example: ooxml.is_ooxml*
+
 
 type number_of_on_disk_entries
 The number of entries in the central directory on this disk.
