@@ -2,7 +2,9 @@ OOXML YARA module is used to parse OOXML file formats that are typically found i
 
 Below are the instructions to install this module in YARA. The module has been tested on YARA 4.5.4. For details on the module usage and functions, please see ooxml.md file here: https://github.com/RustyNoob-619/YARA/blob/main/Modules/OOXML/File%20Structure/docs/modules/ooxml.md
 
-There is a simple and short version of this installation which only requires ooxml.c, ooxml.h and changes to module_list, MakeFile.am
+# Simple Installation
+
+The simple and short version of this installation only requires ooxml.c, ooxml.h and changes to module_list, MakeFile.am
 
 **NOTE:** The files in the File Structure folder on this repository are arranged based on where they are located in your YARA directory.
 
@@ -77,3 +79,5 @@ After pasting the above files in their respective directories, run the following
 `make check` 
 
 `make install`
+
+For any issues with installation and usage of the module, please use the issues feature on this repository :)
