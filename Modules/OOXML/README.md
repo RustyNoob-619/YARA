@@ -106,4 +106,12 @@ After pasting the above files in their respective directories, run the following
 
 `make install`
 
+# Usage
+
+File hash tested on 4bad3e34a192a8f305e188538b4370ea835446cc6ba32fe046d9a5f2bc3df172 which is attributed to an Indian APT known as Sidewinder.
+
+=> Sample YARA ruleset for the module can be found here.
+
+=> Sample log for the module run can be found here.
+
 For any issues with installation and usage of the module, please use the issues feature on this repository :)
