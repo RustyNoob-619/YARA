@@ -23,6 +23,8 @@ Modify the following files with the below:
 
 # Complex Installation
 
+This installation is not different from the above one when it comes to the outcome. This is essentially the developer method if installing the module to enable testing and debugging.
+
 Navigate to the File Structure folder and add the following files to their respective locations in your YARA root directory:
 
 - ooxml.c: add to yara-4.5.x => libyara => modules => ooxml -> ooxml.c
