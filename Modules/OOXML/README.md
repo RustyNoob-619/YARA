@@ -2,28 +2,37 @@ OOXML YARA module is used to parse OOXML file formats that are typically found i
 
 Below are the instructions to install this module in YARA. The module has been tested on YARA 4.5.4. For details on the module usage and functions, please see ooxml.md file [here](https://github.com/RustyNoob-619/YARA/blob/main/Modules/OOXML/File%20Structure/docs/modules/ooxml.md).
 
-**NOTE:** The files in the File Structure folder on this repository are arranged based on where they are located in your YARA directory.
+**NOTE:** The files in the File Structure folder in this repository are arranged based on where they are located in your YARA root directory.
 
 # Simple Installation
 
-The simple and short version of this installation only requires ooxml.c, ooxml.h and changes to module_list, MakeFile.am. 
+The simple and short version of this installation is the recommended method since it only requires ooxml.c, ooxml.h and changes to module_list, MakeFile.am. 
 
-Add the following files to their respective file paths:
+1. Add the following files to their respective file paths:
 
 - ooxml.c: add to yara-4.5.x => libyara => modules => ooxml -> ooxml.c
 
 - ooxml.h: add to yara-4.5.x => libyara => include => yara -> ooxml.h
 
-Modify the following files with the below:
+2. Modify the following files with the below:
 
 - yara-4.5.x => libyara => modules -> modules_list #ADD the line   MODULE(ooxml)
 
 - yara-4.5.x -> MakeFile.am                        #ADD the line   MODULES += libyara/modules/demo/demo.c
 
+3. Run the below commands
+
+```
+./bootstrap.sh
+./configure
+make
+sudo make install
+```
+**NOTE:** You might need to run `SUDO` on the make commands above if you get a Permission Denied error.
 
 # Complex Installation
 
-This installation is not different from the above one when it comes to the outcome. This is essentially the developer method if installing the module to enable testing and debugging.
+This installation is not different from the above one when it comes to the outcome and is essentially intended for developers to enable testing and debugging.
 
 Navigate to the File Structure folder and add the following files to their respective locations in your YARA root directory:
 
