@@ -24,4 +24,5 @@ A one stop shop where you can find everything I have worked on YARA from rules t
 ```
 ## Socials
 => X/Twiter: https://x.com/RustyNoob619
+
 => LinkedIn: https://www.linkedin.com/in/yashraj-solanki-838b9b204/ (VERY CRINGY)
