@@ -1,0 +1,26 @@
+// Open VSCode
+// Go to File => Preferences => Configure Snippets 
+// From the Drop Down Menu, scroll to the bottom to file YARA Language 
+// Paste the Below Code and Save the File
+// Hit CTRL + SPACE or type 'yara' to invoke the auto-complete when opening any YARA file
+// Use TAB to Navigate through the YAML File
+// For future modifications to the template file, it will be stored in
+// C:\Users\your_first_name.your_last_name\AppData\Roaming\Code\User\snippets\yara.json
+
+{
+	
+	"YAML Template": {
+	
+	"prefix": "yara",
+	
+	"body": [
+	
+		"//Note: Please configure author field in the snippet code for YARA\n//Note: Not all fields are mandatory, please see Wiki for more info on Rule Naming Convention here: https://github.com/RustyNoob-619/100-Days-of-YARA-2026/blob/main/Getting%20Started/Rules%20Naming%20Convention.md\n//Rule Name: Intention_ActorType_CountryCode_ActorName_OSType_Technology_MalwareType_MalwareName_OPTIONALArtifact_RuleDate\n\n//Import Modules Here (Optional)\n\nrule ${3|Actor,MAL,TTP,TOOl,Packer,EMPTY|}_${4|APT,CRIME,HACK,UNC|}_${5:CountryCode}_${6:ActorName}_MAL_${7|WIN,LNX,MAC|}_${8|PE,EXE,DLL,SYS,ELF,LNK,ZIP,RAR,Script_PY,Script_JS,Script_VBS,Script_PS,PDF,DOC|}_${9|Loader,Backdoor,Infostealer,Downloader,Dropper,Exploit_CVE_ID,Ransomware,RAT,Rootkit|}_${10:MalwareName}_${11|OPTIONALArtifact,Strings,PEProperties,PDB,CodeSignCert|}_${CURRENT_MONTH_NAME_SHORT}${CURRENT_YEAR_SHORT}\n{\n\tmeta:\n\t\trule_id = \"${UUID}\"\n\t\tdate = \"${CURRENT_DATE}-${CURRENT_MONTH}-${CURRENT_YEAR}\"\n\t\tauthor = \"FirstName LastName\"\n\t\tdescription = \"Detects MalwareX used by ActorY based on \"\n\t\tsource = \"Source_URL\"\n\t\tfilehash = \"${1:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}\"\n\n\tstrings:\n\t\t$$str1 = \"\"\n\t\t$$str2 = \"\"\n\t\t$$str3 = \"\"\n\n\tcondition:\n\t\tuint16(0) == 0x5a4d //Change for non-PE File Types\n\t\tand all of them\n\t\tand filesize < ${2:100KB} //Change as Required\n\n}"
+	
+	],
+	
+	"description": "YARA VS Code Snippet Generator, Current Version: 1.2"
+	
+	}
+	
+	}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YARA Cheat Sheet</title>
+    <style>
+        /* Using Inter font from Google Fonts for a clean look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            /* Dark green background */
+            background-color: #121212; 
+            /* Light text color for contrast */
+            color: #e0e0e0; 
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.7;
+            /* Center the content with a max-width */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        h1 {
+            /* Bright green for the main title */
+            color: rgb(85, 250, 207); 
+            border-bottom: 2px solid rgb(85, 250, 207);
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h2 {
+            /* Light green for section headers */
+            color: rgb(85, 250, 207); 
+            border-bottom: 1px solid rgb(50, 200, 160); /* Darker shade of new color */
+            padding-bottom: 8px;
+            margin-top: 35px;
+            font-weight: 600;
+        }
+
+        h3 {
+            /* Light blue/aqua for sub-headers */
+            color: #40E0D0; 
+            margin-top: 25px;
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Inline code snippets */
+        code {
+            /* Slightly lighter green background for code */
+            background-color: rgb(10, 80, 70); 
+            color: #ffffff;
+            padding: 4px 7px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+        }
+
+        /* Code blocks */
+        pre {
+            /* Very dark green for code blocks */
+            background-color: #1e1e1e; 
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            border: 1px solid rgb(10, 80, 70);
+        }
+
+        /* Reset code styling inside a pre block */
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        strong {
+            /* Light yellow for emphasized text */
+            color: #fafad2; 
+            font-weight: 600;
+        }
+
+        /* Italicized comments in examples */
+        i {
+            color: rgb(50, 200, 160);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>YARA Cheat Sheet</h1>
+
+    <h2>Runtime Options</h2>
+    <ul>
+        <li><code>-r</code> : Recursive scanning (scans directories and subdirectories).</li>
+        <li><code>-s</code> : Display matched strings and their offsets.</li>
+        <li><code>-D</code> : Display module data (useful for debugging).</li>
+    </ul>
+
+    <h2>Rule Modifiers</h2>
+    <ul>
+        <li><code>global</code>: Ensures this rule is evaluated before other rules.</li>
+        <li><code>private</code>: Prevents the rule from producing output when it hits (useful for dependency rules).</li>
+        <li><code>rule_name</code> (in conditions): Allows you to use the boolean outcome of another rule within your condition logic (e.g., <code>condition: $a and MyOtherRule</code>).</li>
+    </ul>
+
+    <h2>String Definitions</h2>
+    <h3>String Types</h3>
+    <ul>
+        <li><strong>Text Strings:</strong> <code>""</code>
+            <ul>
+                <li>Represents ASCII or Wide (UTF-16) strings.</li>
+                <li><strong>Modifiers:</strong> <code>ascii</code>, <code>wide</code>, <code>fullword</code>, <code>base64</code>, <code>xor</code></li>
+            </ul>
+        </li>
+        <li><strong>Hex Strings:</strong> <code>{}</code>
+            <ul>
+                <li>Represents raw hexadecimal bytes.</li>
+                <li><strong>Wildcards:</strong> <code>??</code> (any byte)</li>
+                <li><strong>Jumps:</strong> <code>[4-8]</code> (jump 4 to 8 bytes)</li>
+                <li><strong>Alternatives:</strong> <code>( 01 02 | 03 04 )</code> (match <code>01 02</code> OR <code>03 04</code>)</li>
+            </ul>
+        </li>
+        <li><strong>Regular Expressions:</strong> <code>/ /</code>
+            <ul>
+                <li>Standard regex syntax, enclosed in forward slashes.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>String Symbols (in Conditions)</h3>
+    <ul>
+        <li><code>$</code>: Represents a string (e.g., <code>$a</code>, <code>$hex_string</code>).</li>
+        <li><code>@</code>: Represents the offset (address) of a string match (e.g., <code>@a[1] > 100</code>).</li>
+        <li><code>#</code>: Represents the count (number of occurrences) of a string (e.g., <code>#a == 5</code>).</li>
+    </ul>
+
+    <h2>Conditions</h2>
+    <p>Standard boolean logic and keywords:</p>
+    <ul>
+        <li><strong>Operators:</strong> <code>and</code>, <code>or</code>, <code>not</code></li>
+        <li><strong>Grouping:</strong>
+            <ul>
+                <li><code>(any of them)</code>: Shorthand for <code>($a or $b or $c)</code>.</li>
+                <li><code>(all of them)</code>: Shorthand for T<code>($a and $b and $c)</code>.</li>
+                <li><code>(2 of ($str*))</code>: True if at least 2 strings starting with <code>$str</code> are found.</li>
+            </ul>
+        </li>
+        <li><strong>File Size:</strong> <code>filesize > 100KB</code> or <code>filesize < 1MB</code>.</li>
+    </ul>
+
+    <h2>Loops</h2>
+    <p>Used to iterate over string matches or module data.</p>
+    <pre><code>for &lt;number&gt; &lt;variable&gt; in &lt;iterable_function&gt;:
+    ( &lt;variable&gt;.&lt;property&gt; &lt;condition&gt; )
+</code></pre>
+    <p><strong>Example:</strong> <code>for any i in (1..#a) : ( @a[i] < 100 )</code> <i>(any match of <code>$a</code> is found in the first 100 bytes).</i></p>
+
+    <h2>File Headers / Magic Bytes</h2>
+    <p>Use <code>uintXXyy(offset)</code> to read integers from a file's offset.</p>
+    <ul>
+        <li><strong><code>uint</code></strong>: Unsigned integer.</li>
+        <li><strong><code>XX</code></strong>: Length in bits (e.g., <code>16</code> or <code>32</code>).</li>
+        <li><strong><code>yy</code></strong>: Endianness. <code>le</code> (little-endian) is default. <code>be</code> is for big-endian.</li>
+    </ul>
+    <p><strong>Examples:</strong></p>
+    <ul>
+        <li><strong>Windows PE:</strong> <code>uint16be(0) == 0x4D5A</code> <i>(Reads "MZ" at offset 0).</i></li>
+        <li><strong>LNK Header:</strong> <code>{ 4c 00 00 00 01 14 02 00 } at 0</code></li>
+        <li><strong>ELF Header:</strong> <code>uint32be(0) == 0x7F454C46</code> <i>(Reads "\x7FELF" at offset 0).</i></li>
+        <li><strong>OOXML (Zip):</strong> <code>{ 50 4B 03 04 14 00 06 00 } at 0</code> <i>(Reads "PK\x03\x04...")</i></li>
+    </ul>
+
+    <h2>PE Module</h2>
+    <p>(Requires <code>import "pe"</code>)</p>
+
+    <h3>Languages</h3>
+    <ul>
+        <li><code>pe.locale(0x0419)</code> <i>// Russian (RU)</i></li>
+        <li><code>pe.locale(0x0004)</code> <i>// Chinese (CN)</i></li>
+        <li><code>pe.locale(0x0412)</code> <i>// Korean (KR)</i></li>
+    </ul>
+
+    <h3>Imports &amp; Exports</h3>
+    <ul>
+        <li><code>pe.imphash()</code>: Returns the import hash.</li>
+        <li><code>pe.imports("kernel32.dll", "CreateFileA")</code>: Checks for a specific function import.</li>
+        <li><code>pe.import_details</code>: Use in a loop to check import properties.</li>
+        <li><code>pe.exports("MyFunctionName")</code>: Checks for a specific exported function.</li>
+    </ul>
+
+    <h3>PDB Path</h3>
+    <ul>
+        <li><code>pe.pdb_path</code>: Accesses the PDB (Program Database) path string.
+            <ul>
+                <li><strong>Useful with modifiers:</strong> <code>pe.pdb_path contains "C:\\Users\\"</code></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>File Metadata (Version Info)</h3>
+    <ul>
+        <li><code>pe.version_info["field_name"]</code></li>
+        <li><strong>Common Fields:</strong>
+            <ul>
+                <li><code>CompanyName</code></li>
+                <li><code>FileDescription</code></li>
+                <li><code>InternalName</code></li>
+                <li><code>LegalCopyright</code></li>
+                <li><code>LegalTrademarks</code></li>
+                <li><code>OriginalFilename</code></li>
+                <li><code>ProductName</code></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Certificates (Signatures)</h3>
+    <ul>
+        <li><code>pe.signatures[0].serial</code>: Serial number (usually <code>index = 0</code>).</li>
+        <li><code>pe.signatures[0].thumbprint</code>: Thumbprint (usually <code>index =0</code>).</li>
+        <li><code>pe.signatures[0].subject</code>: Subject string (usually <code>index = 0</code>).
+            <ul>
+                <li><strong>Useful with modifiers:</strong> <code>pe.signatures[0].subject contains "Microsoft"</code></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Console Module</h2>
+    <p>(Requires <code>import "console"</code>)</p>
+    <ul>
+        <li><code>console.log("Debug message")</code></li>
+        <li><code>console.log(pe.imphash())</code>: Very useful for printing module data during rule testing.</li>
+    </ul>
+
+    <h2>Common Modifiers (for Modules)</h2>
+    <p>These functions can be used on string properties from modules (like PDB path or certificate subject):</p>
+    <ul>
+        <li><code>startswith</code></li>
+        <li><code>endswith</code></li>
+        <li><code>contains</code></li>
+    </ul>
+
+</body>
+</html>
+
